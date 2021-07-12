@@ -2,6 +2,11 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "__locale": "c",
+        "__string": "c",
+        "regex": "c",
+        "string": "c",
+        "string_view": "c"
     }
 }
