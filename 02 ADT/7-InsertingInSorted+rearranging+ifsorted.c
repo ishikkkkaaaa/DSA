@@ -70,11 +70,13 @@ void Rearrange(struct Array *arr)
 
 int main()
 {
-    struct Array arr = {{5, 6, 7, 8, 9, 10}, 6, 10};
+    struct Array arr = {{15, -6, 7, -8, 9, 10}, 6, 10};
     int i = 0;
     //print
     printf("Before Inserting\n");
     Display(arr);
+    //after rearrange
+    Rearrange(&arr);
     //insert
     //Insert(&arr, 1);
     //printf("%d \n", isSort(arr));
