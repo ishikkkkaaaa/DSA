@@ -1,71 +1,67 @@
 #include <iostream>
 using namespace std;
 
-//print all subarrays of a given array using BRUTE FORCE=> O(n^3)
-int printSubarrays1(int arr[], int n)
+//Problem : Print all subarrays of a given array
+// Brute Force Approach O(N^3)
+int largestSubarraySum1(int arr[], int n)
 {
-    int i, j;
-    int largestSum = 0;
 
-    for (i = 0; i < n; i++)
+    int largest_sum = 0;
+
+    for (int i = 0; i < n; i++)
     {
-        for (j = i; j < n; j++)
+        for (int j = i; j < n; j++)
         {
-            int sum = 0;
-            //cout << "(" << arr[i] << "," << arr[j] << ")" << endl;
+
+            int subarraySum = 0;
+
             for (int k = i; k <= j; k++)
             {
-                sum += arr[k];
-                //cout << sum << " ";
+                //cout<<arr[k] <<",";
+                subarraySum += arr[k];
             }
-            largestSum = max(largestSum, sum);
-            //cout << endl;
+            //put a check is subarraySum > largest_sum
+            largest_sum = max(largest_sum, subarraySum);
         }
-        // cout << endl;
     }
-    return largestSum;
+    return largest_sum;
 }
-
-//using prefix sum to find the largest subarray O(n^2)
-int printSubarrays2(int arr[], int n)
+// Prefix Sum Approach O(N^2)
+int largestSubarraySum2(int arr[], int n)
 {
-    prefix sum[100] = {0}; //initialize prefix sum array
+
+    //Prefix Sums
+    int prefix[100] = {0}; //initialize all elements to 0
     prefix[0] = arr[0];
 
     for (int i = 1; i < n; i++)
     {
-        prefix[i] = prefix[i - 1] + arr[i]; //prefix[i] stores sum of all elements till i
+        prefix[i] = prefix[i - 1] + arr[i];
     }
-    int i, j;
-    int largestSum = 0;
 
-    for (i = 0; i < n; i++)
+    //largest sum login
+    int largest_sum = 0;
+
+    for (int i = 0; i < n; i++)
     {
-        for (j = i; j < n; j++)
+        for (int j = i; j < n; j++)
         {
-
-            //cout << "(" << arr[i] << "," << arr[j] << ")" << endl;
-            int sum = i > 0 ? prefix[j] - prefix[i - 1] : prefix[j];
-            largestSum = max(largestSum, sum);
-            //cout << endl;
+            int subarraySum = i > 0 ? prefix[j] - prefix[i - 1] : prefix[j]; //if i=0 then prefix[j] - prefix[i-1] = 0
+            //put a check is subarraySum > largest_sum
+            largest_sum = max(largest_sum, subarraySum);
         }
-        // cout << endl;
     }
-    return largestSum;
+    return largest_sum;
 }
 
 int main()
 {
-    int arr[] = {10,
-                 20,
-                 30,
-                 40,
-                 50,
-                 60};
+    //Array Containing
+    int arr[] = {-2, 3, 4, -1, 5, -12, 6, 1, 3};
+    int n = sizeof(arr) / sizeof(int);
 
-    int n = sizeof(arr) / sizeof(arr[0]);
-    cout << printSubarrays1(arr, n) << endl;
-    cout << printSubarrays2(arr, n) << endl;
+    cout << largestSubarraySum1(arr, n) << endl;
+    cout << largestSubarraySum2(arr, n) << endl;
 
     return 0;
 }
