@@ -8,7 +8,7 @@ int main()
     //cretae a vector
     //vector<int> arr;
 
-    vector<int> arr = {2, 3, 4, 5, 6, 1};
+    vector<int> arr = { 2, 3, 4, 5, 6, 1 };
 
     //vector size
     cout << "vector size: " << arr.size() << endl;

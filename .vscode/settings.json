@@ -1,7 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
-        "*.cpp": "css",
+        "*.cpp": "cpp",
         "iostream": "cpp",
         "ostream": "cpp",
         "__locale": "c",
