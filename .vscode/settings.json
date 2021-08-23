@@ -10,6 +10,7 @@
         "string": "c",
         "string_view": "c",
         "__bit_reference": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "iterator": "cpp"
     }
 }
