@@ -1,16 +1,6 @@
 {
-    "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "*.cpp": "cpp",
-        "iostream": "cpp",
-        "ostream": "cpp",
-        "__locale": "c",
-        "__string": "c",
-        "regex": "c",
-        "string": "c",
-        "string_view": "c",
-        "__bit_reference": "cpp",
-        "algorithm": "cpp",
-        "iterator": "cpp"
+        "iostream": "cpp"
     }
 }
