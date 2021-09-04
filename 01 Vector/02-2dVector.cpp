@@ -24,6 +24,7 @@ int main()
     //updating any value
     arr[0][0] = 100;
     arr[1][0] += 100;
+    
     //print vector
     for (int i = 0; i < arr.size(); i++)
     {
