@@ -74,8 +74,6 @@
     <td></td>
     <td><a href="">Counting Sort</a></td>
   </tr>
-</table>
-
   <!-- 4 -->
 
 <tr>
@@ -137,7 +135,7 @@
     <td><a href="">Spiral print</a></td>
   </tr>
 </tr>
-     
+
 
   <!-- 6 -->
 
@@ -158,11 +156,11 @@
   <!-- 7 -->
   <tr>
     <td>Backtracking</td>
-    <td><a href="">Merge Sort</a></td>
+    <td><a href="">Backtracking an array</a></td>
   </tr>
   <tr>
     <td></td>
-    <td><a href="">Quick Sort</a></td>
+    <td><a href="">Backtracking a vector</a></td>
   </tr>
   <tr>
     <td></td>
