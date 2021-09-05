@@ -1,4 +1,5 @@
 #include <iostream>
+#include<vector>
 
 using namespace std;
 
@@ -6,7 +7,7 @@ using namespace std;
 //n=>till what numbers
 //value=>starting number
 
-void printArray(int *array, int n)
+void printArray(vector<int> array, int n)
 {
     for (int i = 0; i < n; i++)
     {
@@ -14,8 +15,8 @@ void printArray(int *array, int n)
     }
     cout << endl;
 }
-
-void fillArray(int *array, int i, int n, int value)
+//shared accross all function calls, cuz shared by refrenece,if it was to be by vlaue, toh vector would have gotten destroyed
+void fillArray(vector<int> &array, int i, int n, int value)
 {
     //base case
     if (i == n)
@@ -34,10 +35,10 @@ void fillArray(int *array, int i, int n, int value)
 
 int main()
 {
-    int array[100] = {0};
+    vector<int> array(100, 0);
     int n;
     cin >> n;
     fillArray(array, 0, n, 1);
-    printArray(array,n);
+    printArray(array, n);
     return 0;
 }
