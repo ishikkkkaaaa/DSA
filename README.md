@@ -164,7 +164,16 @@
   </tr>
   <tr>
     <td></td>
-    <td><a href="">Rotation search</a></td>
+    <td><a href="">Finding subsets</a></td>
   </tr>
+  <tr>
+    <td></td>
+    <td><a href="">Ordering subset</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="">N-Queen</a></td>
+  </tr>
+ 
 </tr>
 </table>
