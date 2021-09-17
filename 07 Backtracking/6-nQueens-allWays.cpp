@@ -1,3 +1,4 @@
+//calculating all ways n queens can be applied!
 #include <iostream>
 using namespace std;
 
@@ -43,15 +44,16 @@ void printBoard(int n, int board[][20])
     cout << endl;
 }
 
-bool solveNqueen(int n, int board[][20], int i)
+int solveNqueen(int n, int board[][20], int i)
 {
     //base case
     if (i == n)
     {
         //print board
-        printBoard(n, board);
-        //return; //solution found
+        //printBoard(n, board);
+        return 1; //solution found
     }
+    int ways = 0; //number of solutions
     //recursive case,placing queen at every row
     //checking for cols
     for (int j = 0; j < n; j++)
@@ -62,17 +64,13 @@ bool solveNqueen(int n, int board[][20], int i)
             //place queen
             board[i][j] = 1;
             //recursive call
-            bool success = solveNqueen(n, board, i + 1);
+            ways += solveNqueen(n, board, i + 1);
 
-            if (success)
-            {
-                return true;
-            }
             //remove queen
             board[i][j] = 0;
         }
     }
-    return false; //no solution
+    return ways; //no solution
 }
 
 int main()
@@ -80,6 +78,6 @@ int main()
     int board[20][20] = {0};
     int n;
     cin >> n;
-    solveNqueen(n, board, 0);
+    cout << "Number of ways=> " << solveNqueen(n, board, 0);
     return 0;
 }
