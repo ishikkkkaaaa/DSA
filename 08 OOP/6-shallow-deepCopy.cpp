@@ -14,6 +14,12 @@ public:
     {
         mrp = price;
     }
+    //setters!
+    void setName(const char *name)
+    {
+        strcpy(this->name, name);
+        //name->name;
+    }
     void setSellingPrice(int price)
     {
         if (mrp < price)
@@ -32,21 +38,20 @@ public:
     }
 
     //Constructor
-    Product(int id, const char *name, int mrp, int selling_price)
+    Product(int id, char *n, int mrp, int selling_price)
     {
-        cout << "PARAMETRIZED_CONSTRUCTOR" << endl;
         this->id = id;
-        name-new char[strlen(n)+1]
-        strcpy(this->name, name);
         this->mrp = mrp;
         this->selling_price = selling_price;
+        name = new char[strlen(n) + 1];
+        strcpy(name, n);
     }
 
     //Copy Constructor
     Product(const Product &X)
     {
         id = X.id;
-        strcpy(name, X.name);
+        //strcpy(name, X.name);
         mrp = X.mrp;
         selling_price = X.selling_price;
     }
@@ -74,13 +79,19 @@ int main()
     //Product camera;
 
     Product camera(101, "GoProHero9", 28000, 26000);
+    Product oldCamera(101, "GoProHero9", 28000, 26000);
+
     //copy constructor
     Product webcam(camera);
 
+    oldCamera.setName("sony");
+    oldCamera.showDetails();
     camera.showDetails();
+
+    /* camera.showDetails();
 
     webcam.setMrp(1000);
     webcam.showDetails();
-
+ */
     return 0;
 }
