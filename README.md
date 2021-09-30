@@ -174,6 +174,23 @@
     <td></td>
     <td><a href="">N-Queen</a></td>
   </tr>
+  <!-- 8 -->
+  <tr>
+    <td>OOP</td>
+    <td><a href="">Getter and Setter</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="">Constructors</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="">Copy constructors</a></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><a href="">Shallow and Deep Constructors</a></td>
+  </tr>
  
 </tr>
 </table>
