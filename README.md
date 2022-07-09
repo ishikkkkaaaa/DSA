@@ -74,6 +74,11 @@
     <td></td>
     <td><a href="">Counting Sort</a></td>
   </tr>
+  </tr>
+    <tr>
+    <td></td>
+    <td><a href="">Linear Search</a></td>
+  </tr>
   <!-- 4 -->
 
 <tr>
