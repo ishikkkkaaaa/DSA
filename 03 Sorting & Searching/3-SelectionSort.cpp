@@ -21,8 +21,13 @@ void selectionSort(int arr[], int n)
 }
 int main()
 {
-    int arr[] = { 2,3,9,7,4,6,1 };
-    int n = sizeof(arr) / sizeof(int);
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
     selectionSort(arr, n);
     cout << "Sorted array is : ";
     for (int i = 0;i < n;i++)

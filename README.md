@@ -79,8 +79,12 @@
     <td></td>
     <td><a href="">Linear Search</a></td>
   </tr>
+  </tr>
+    <tr>
+    <td></td>
+    <td><a href="">Binary Search</a></td>
+  </tr>
   <!-- 4 -->
-
 <tr>
     <td>Strings</td>
     <td><a href="">Creating a string array</a></td>
